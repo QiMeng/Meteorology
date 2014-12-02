@@ -10,7 +10,6 @@
 
 @interface WeatherModel : NSObject
 
-
 @property (nonatomic, copy) NSString * city;    //城市名称
 @property (nonatomic, assign) CGFloat lat;      //纬度
 @property (nonatomic, assign) CGFloat lon;      //经度

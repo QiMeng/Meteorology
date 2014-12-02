@@ -166,7 +166,7 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 	self = [super initWithFrame:frame];
 	if (self) {
 		// Set default values for properties
-		self.animationType = MBProgressHUDAnimationFade;
+		self.animationType = MBProgressHUDAnimationZoom;
 		self.mode = MBProgressHUDModeIndeterminate;
 		self.labelText = nil;
 		self.detailsLabelText = nil;

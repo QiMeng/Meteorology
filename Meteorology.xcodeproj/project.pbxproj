@@ -18,7 +18,6 @@
 		FF0927E81A262050008B1E47 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FF0927E71A262050008B1E47 /* main.m */; };
 		FF0927EC1A262050008B1E47 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FF0927EB1A262050008B1E47 /* AppDelegate.m */; };
 		FF0927EF1A262050008B1E47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF0927ED1A262050008B1E47 /* Main.storyboard */; };
-		FF0927F21A262050008B1E47 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF0927F11A262050008B1E47 /* ViewController.m */; };
 		FF0927F41A262050008B1E47 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF0927F31A262050008B1E47 /* Images.xcassets */; };
 		FF0927FB1A262050008B1E47 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF0927FA1A262050008B1E47 /* XCTest.framework */; };
 		FF0927FC1A262050008B1E47 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF0927DB1A262050008B1E47 /* Foundation.framework */; };
@@ -38,6 +37,8 @@
 		FFC903571A2B0B5F0080A52C /* untitled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FFC9034D1A2B0B5F0080A52C /* untitled@2x.png */; };
 		FFC903581A2B0B5F0080A52C /* volume@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FFC9034E1A2B0B5F0080A52C /* volume@2x.png */; };
 		FFC9035A1A2B0C780080A52C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFC903591A2B0C780080A52C /* MapKit.framework */; };
+		FFDF4D0F1A2E7E94004256EE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDF4D0E1A2E7E94004256EE /* ViewController.m */; };
+		FFDF4D121A2E7EA7004256EE /* WeatherView.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDF4D111A2E7EA7004256EE /* WeatherView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,8 +72,6 @@
 		FF0927EA1A262050008B1E47 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FF0927EB1A262050008B1E47 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		FF0927EE1A262050008B1E47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FF0927F01A262050008B1E47 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FF0927F11A262050008B1E47 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		FF0927F31A262050008B1E47 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FF0927F91A262050008B1E47 /* MeteorologyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeteorologyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF0927FA1A262050008B1E47 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -94,6 +93,10 @@
 		FFC9034D1A2B0B5F0080A52C /* untitled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "untitled@2x.png"; sourceTree = "<group>"; };
 		FFC9034E1A2B0B5F0080A52C /* volume@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "volume@2x.png"; sourceTree = "<group>"; };
 		FFC903591A2B0C780080A52C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		FFDF4D0D1A2E7E94004256EE /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FFDF4D0E1A2E7E94004256EE /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FFDF4D101A2E7EA7004256EE /* WeatherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherView.h; sourceTree = "<group>"; };
+		FFDF4D111A2E7EA7004256EE /* WeatherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,10 +191,10 @@
 				FF0927EA1A262050008B1E47 /* AppDelegate.h */,
 				FF0927EB1A262050008B1E47 /* AppDelegate.m */,
 				FF0927ED1A262050008B1E47 /* Main.storyboard */,
-				FF0927F01A262050008B1E47 /* ViewController.h */,
-				FF0927F11A262050008B1E47 /* ViewController.m */,
 				FF0928171A2632BF008B1E47 /* TwoViewController.h */,
 				FF0928181A2632BF008B1E47 /* TwoViewController.m */,
+				FFDF4D0C1A2E7E94004256EE /* ViewController */,
+				FFDF4D0B1A2E7E94004256EE /* View */,
 				FF07094A1A2CBDC000F5270F /* Models */,
 				FF0928101A262F61008B1E47 /* Request */,
 				FF07093C1A2CB18600F5270F /* Helpers */,
@@ -265,6 +268,24 @@
 				FFC9034E1A2B0B5F0080A52C /* volume@2x.png */,
 			);
 			path = common;
+			sourceTree = "<group>";
+		};
+		FFDF4D0B1A2E7E94004256EE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FFDF4D101A2E7EA7004256EE /* WeatherView.h */,
+				FFDF4D111A2E7EA7004256EE /* WeatherView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FFDF4D0C1A2E7E94004256EE /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FFDF4D0D1A2E7E94004256EE /* ViewController.h */,
+				FFDF4D0E1A2E7E94004256EE /* ViewController.m */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -409,9 +430,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF0927F21A262050008B1E47 /* ViewController.m in Sources */,
 				FF0927EC1A262050008B1E47 /* AppDelegate.m in Sources */,
+				FFDF4D121A2E7EA7004256EE /* WeatherView.m in Sources */,
 				FF07094D1A2CBDC000F5270F /* WeatherModel.m in Sources */,
+				FFDF4D0F1A2E7E94004256EE /* ViewController.m in Sources */,
 				FF0928161A262F9E008B1E47 /* FirstEngine.m in Sources */,
 				FF0709461A2CB85E00F5270F /* NetEngine.m in Sources */,
 				FF0928191A2632BF008B1E47 /* TwoViewController.m in Sources */,

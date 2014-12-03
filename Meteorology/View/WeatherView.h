@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "WeatherModel.h"
 @interface WeatherView : UIView {
     
     UIImageView * weatherImageView; //天气信息背景图片
@@ -24,5 +24,8 @@
     
     
 }
+
+@property (nonatomic, strong) WeatherModel * model;
+
 
 @end

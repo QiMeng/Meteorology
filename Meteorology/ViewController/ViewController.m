@@ -57,15 +57,11 @@
 
 }
 - (IBAction)touchRanging:(id)sender {
+    
 }
 - (IBAction)touchSetting:(id)sender {
+    
 }
-
-
-
-
-
-
 
 #pragma mark 数据获取
 /**
@@ -93,6 +89,9 @@
 //                                               [_showWeathers addObject:model];
 //                                           }
 //                                       }
+                                       
+                                       bottomView.model = [_showWeathers firstObject];
+                                       
                                    }
                                    
                                    [MBProgressHUD hideHUDForView:bottomView animated:YES];

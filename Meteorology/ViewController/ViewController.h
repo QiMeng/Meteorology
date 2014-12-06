@@ -26,7 +26,7 @@
     
     
     
-    
+    int showWeatherInt;
 }
 
 

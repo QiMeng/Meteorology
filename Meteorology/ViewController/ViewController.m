@@ -38,6 +38,8 @@
     
     _showWeathers = [NSMutableArray array];
     
+    showWeatherInt = 0;
+    
     [self touchRefresh:nil];
     
     
@@ -90,7 +92,9 @@
 //                                           }
 //                                       }
                                        
-                                       bottomView.model = [_showWeathers firstObject];
+//                                       bottomView.model = [_showWeathers firstObject];
+                                       
+                                       [self reloadWeather];
                                        
                                    }
                                    
@@ -103,7 +107,19 @@
     
 }
 
-
+#pragma mark - 更新天气预报板块
+- (void)reloadWeather {
+    
+    showWeatherInt++;
+    if (showWeatherInt == _showWeathers.count-1) {
+        showWeatherInt = 0;
+    }
+    
+    bottomView.model = _showWeathers[showWeatherInt];
+    
+    [self performSelector:@selector(reloadWeather) withObject:nil afterDelay:5];
+    
+}
 
 
 

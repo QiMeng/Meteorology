@@ -12,6 +12,10 @@
 
 #import <UIImageView+ProgressView.h>
 
+#import <POP.h>
+
+
+
 @implementation WeatherView
 
 - (id)initWithFrame:(CGRect)frame
@@ -41,7 +45,6 @@
     
     iconBackgroundImageView = [[UIImageView alloc]initWithFrame:CGRectMake(self.width - iconHeight, 0, iconHeight, iconHeight)];
     iconBackgroundImageView.backgroundColor = [UIColor blueColor];
-    
     [self addSubview:iconBackgroundImageView];
     
     iconImageView = [[UIImageView alloc]initWithFrame:iconBackgroundImageView.bounds];
@@ -50,12 +53,29 @@
     [self addSubview:iconBackgroundImageView];
 
     
-    
-    weatherImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, self.width - iconHeight, self.height)];
-    weatherImageView.backgroundColor = [UIColor redColor];
-    weatherImageView.contentMode = UIViewContentModeScaleAspectFill;
-    [self addSubview:weatherImageView];
+    {
+        weatherImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, self.width - iconHeight, self.height)];
+        weatherImageView.backgroundColor = [UIColor redColor];
+        weatherImageView.contentMode = UIViewContentModeScaleAspectFill;
+        [self addSubview:weatherImageView];
  
+        weatherTempLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, weatherImageView.width, weatherImageView.height *(2/3.0))];
+        [weatherImageView addSubview:weatherTempLabel];
+        weatherTempLabel.textColor = [UIColor whiteColor];
+        weatherTempLabel.textAlignment = NSTextAlignmentCenter;
+        weatherTempLabel.font = [UIFont boldSystemFontOfSize:25];
+        
+        
+        
+        cityLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, weatherTempLabel.maxY, weatherImageView.width, weatherImageView.height * (1/3.0))];
+        [weatherImageView addSubview:cityLabel];
+        cityLabel.textColor = [UIColor whiteColor];
+        cityLabel.textAlignment = NSTextAlignmentCenter;
+        cityLabel.font = [UIFont boldSystemFontOfSize:14];
+    }
+    
+    
+    
     
 }
 
@@ -64,11 +84,29 @@
     
     _model = model;
     
-    [weatherImageView sd_setImageWithURL:[NSURL URLWithString:@"http://qimeng.github.io/phone/imgs/IMG_00011.JPG"] usingProgressView:nil];
+    weatherTempLabel.text = [NSString stringWithFormat:@"%@ ~ %@",_model.temp0,_model.temp1];
+//    weatherTempLabel.text = _model.temp0;
+    cityLabel.text = _model.city;
     
+    [weatherImageView sd_setImageWithURL:[NSURL URLWithString:@"http://qimeng.github.io/phone/imgs/113.jpg"]];
+    
+    [iconImageView sd_setImageWithURL:[NSURL URLWithString:@"http://qimeng.github.io/phone/imgs/114.jpg"]];
+    
+    [self transitionView];
+
 }
 
-
+#pragma mark - 翻转的动画效果
+- (void)transitionView {
+    
+    CATransition *t = [CATransition animation];
+	t.type = @"flip";
+	t.subtype = kCATransitionFromLeft;
+	t.duration = 0.25;
+	t.removedOnCompletion = YES;
+    [self.layer addAnimation:t forKey:@"flip"];
+    
+}
 
 
 /*

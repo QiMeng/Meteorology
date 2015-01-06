@@ -7,6 +7,7 @@
 //
 
 #import "MKNetworkEngine.h"
+#import "WeatherModel.h"
 //#import <SVProgressHUD.h>
 
 #define QMServiceShare [QMService sharedManager]

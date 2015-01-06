@@ -7,10 +7,6 @@
 //
 
 #import "QMService.h"
-#import "WeatherModel.h"
-//#import "QMUserModel.h"
-//#import "QMPersonModel.h"
-//#import <JSONKit.h>
 
 @implementation QMService
 
@@ -39,17 +35,10 @@
 + (void)QM_MK_WeatherUrlPath:(NSString *)aPathStr
                        completionHandler:(CompletionBlock)completionBlock
                              failHandler:(FailBlock)failBlock {
-    
-//    MKNetworkOperation *op = [QMServiceShare operationWithPath:@"user/getverificationcode"
-//                                                        params:dic
-//                                                    httpMethod:@"POST"];
-//    [op setPostDataEncoding:MKNKPostDataEncodingTypeJSON];
-    
+
     MKNetworkOperation *op = [QMServiceShare operationWithPath:aPathStr
                                               params:nil
                                           httpMethod:@"GET"];
-    
-    
     
     [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
         
@@ -62,17 +51,18 @@
                 NSMutableArray * tempArray = [NSMutableArray array];
                 
                 for (NSArray * array in items) {
-                    [tempArray addObject:[WeatherModel itemFromArray:array]];
+                    WeatherModel * model = [WeatherModel itemFromArray:array];
+                    if (model) {
+                        [tempArray addObject:[WeatherModel itemFromArray:array]];
+                    }
                 }
                 
                 completionBlock(tempArray);
-                
             }
             
         }else {
             
             failBlock(@"数据结构错误,稍后重试");
-            
         }
         
         
@@ -83,7 +73,6 @@
     }];
     
     [QMServiceShare enqueueOperation:op];
-    
 }
 
  

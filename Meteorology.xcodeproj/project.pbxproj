@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		DD921166E99CCDA3C86DEC26 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE885DFC95411C64DF015278 /* libPods.a */; };
-		FF0709401A2CB26200F5270F /* UIView+Layer.m in Sources */ = {isa = PBXBuildFile; fileRef = FF07093F1A2CB26200F5270F /* UIView+Layer.m */; };
 		FF0709461A2CB85E00F5270F /* NetEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = FF0709451A2CB85E00F5270F /* NetEngine.m */; };
 		FF07094D1A2CBDC000F5270F /* WeatherModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FF07094C1A2CBDC000F5270F /* WeatherModel.m */; };
 		FF0927DC1A262050008B1E47 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF0927DB1A262050008B1E47 /* Foundation.framework */; };
@@ -39,6 +38,7 @@
 		FFC9035A1A2B0C780080A52C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFC903591A2B0C780080A52C /* MapKit.framework */; };
 		FFDF4D0F1A2E7E94004256EE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDF4D0E1A2E7E94004256EE /* ViewController.m */; };
 		FFDF4D121A2E7EA7004256EE /* WeatherView.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDF4D111A2E7EA7004256EE /* WeatherView.m */; };
+		FFF78D731A5BE12300D2FD6D /* UIView+Layer.m in Sources */ = {isa = PBXBuildFile; fileRef = FFF78D721A5BE12300D2FD6D /* UIView+Layer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,8 +55,6 @@
 		3131D5DCCBBF2BED4A204A85 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		CE885DFC95411C64DF015278 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E893DDF90233D8ABA5EDA18F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		FF07093E1A2CB26200F5270F /* UIView+Layer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layer.h"; sourceTree = "<group>"; };
-		FF07093F1A2CB26200F5270F /* UIView+Layer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layer.m"; sourceTree = "<group>"; };
 		FF0709441A2CB85E00F5270F /* NetEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetEngine.h; sourceTree = "<group>"; };
 		FF0709451A2CB85E00F5270F /* NetEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetEngine.m; sourceTree = "<group>"; };
 		FF07094B1A2CBDC000F5270F /* WeatherModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherModel.h; sourceTree = "<group>"; };
@@ -97,6 +95,8 @@
 		FFDF4D0E1A2E7E94004256EE /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		FFDF4D101A2E7EA7004256EE /* WeatherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherView.h; sourceTree = "<group>"; };
 		FFDF4D111A2E7EA7004256EE /* WeatherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherView.m; sourceTree = "<group>"; };
+		FFF78D711A5BE12300D2FD6D /* UIView+Layer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layer.h"; sourceTree = "<group>"; };
+		FFF78D721A5BE12300D2FD6D /* UIView+Layer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layer.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,15 +132,6 @@
 				E893DDF90233D8ABA5EDA18F /* Pods.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		FF07093C1A2CB18600F5270F /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				FF07093E1A2CB26200F5270F /* UIView+Layer.h */,
-				FF07093F1A2CB26200F5270F /* UIView+Layer.m */,
-			);
-			path = Helpers;
 			sourceTree = "<group>";
 		};
 		FF07094A1A2CBDC000F5270F /* Models */ = {
@@ -191,11 +182,11 @@
 				FF0927EA1A262050008B1E47 /* AppDelegate.h */,
 				FF0927EB1A262050008B1E47 /* AppDelegate.m */,
 				FF0927ED1A262050008B1E47 /* Main.storyboard */,
+				FFF78D701A5BE12300D2FD6D /* QMHelpers */,
 				FFDF4D0C1A2E7E94004256EE /* ViewController */,
 				FFDF4D0B1A2E7E94004256EE /* View */,
 				FF07094A1A2CBDC000F5270F /* Models */,
 				FF0928101A262F61008B1E47 /* Request */,
-				FF07093C1A2CB18600F5270F /* Helpers */,
 				FFC903211A2B08730080A52C /* Resources */,
 				FF0927F31A262050008B1E47 /* Images.xcassets */,
 				FF0927E21A262050008B1E47 /* Supporting Files */,
@@ -286,6 +277,15 @@
 				FFDF4D0E1A2E7E94004256EE /* ViewController.m */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		FFF78D701A5BE12300D2FD6D /* QMHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				FFF78D711A5BE12300D2FD6D /* UIView+Layer.h */,
+				FFF78D721A5BE12300D2FD6D /* UIView+Layer.m */,
+			);
+			path = QMHelpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -437,7 +437,7 @@
 				FFDF4D0F1A2E7E94004256EE /* ViewController.m in Sources */,
 				FF0928161A262F9E008B1E47 /* FirstEngine.m in Sources */,
 				FF0709461A2CB85E00F5270F /* NetEngine.m in Sources */,
-				FF0709401A2CB26200F5270F /* UIView+Layer.m in Sources */,
+				FFF78D731A5BE12300D2FD6D /* UIView+Layer.m in Sources */,
 				FF0927E81A262050008B1E47 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

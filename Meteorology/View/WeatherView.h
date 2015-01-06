@@ -21,7 +21,9 @@
     UIImageView * iconImageView;            //天气状况图片
     
     
-    
+//    UIButton * infoBtn; //详情
+//    UIView * lineView0;
+//    UIView * lineView1;
     
 }
 

@@ -7,13 +7,10 @@
 //
 
 #import "ViewController.h"
-#import "AppDelegate.h"
+
 #import "UIView+Layer.h"
 
-#import "NetEngine.h"
 #import <MBProgressHUD.h>
-#import "WeatherModel.h"
-
 
 #import "QMService.h"
 
@@ -29,6 +26,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    mapSuperView.hidden = YES;
     
     [mapSuperView setRadius:10 BorderWidth:0 BorderColor:nil];
     
@@ -55,6 +54,7 @@
 - (IBAction)touchReduction:(id)sender {
  
 }
+#pragma mark - 刷新数据
 - (IBAction)touchRefresh:(id)sender {
     
     [self refreshNoLocationWeatherData];
@@ -75,19 +75,6 @@
     
     [MBProgressHUD showHUDAddedTo:bottomView animated:YES];
     
-//    [QMService networkLoginDic:@{@"body": @{@"phone": @"15259131237",@"passwd":@"123456"}}
-//             completionHandler:^(id sender) {
-//                 
-//                 
-//                 NSLog(@"账号:%@ 密码:%@",QMUserModelShare.user_im_account,@"123456");
-//                 
-//                 
-//             } failHandler:^(id error) {
-//                 
-//                 [SVProgressHUD showErrorWithStatus:error];
-//                 
-//             }];
-
     [QMService QM_MK_WeatherUrlPath:@"Typhoon/proxy2.jsp?u=weather_level&p=1"
                   completionHandler:^(NSArray * weathers) {
                       

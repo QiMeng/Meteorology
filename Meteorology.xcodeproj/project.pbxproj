@@ -25,7 +25,7 @@
 		FF0928051A262050008B1E47 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FF0928031A262050008B1E47 /* InfoPlist.strings */; };
 		FF0928071A262050008B1E47 /* MeteorologyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FF0928061A262050008B1E47 /* MeteorologyTests.m */; };
 		FF0928161A262F9E008B1E47 /* FirstEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = FF0928151A262F9E008B1E47 /* FirstEngine.m */; };
-		FF0928191A2632BF008B1E47 /* TwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF0928181A2632BF008B1E47 /* TwoViewController.m */; };
+		FF76E99B1A5BCB7F00A1075F /* QMService.m in Sources */ = {isa = PBXBuildFile; fileRef = FF76E99A1A5BCB7F00A1075F /* QMService.m */; };
 		FFC9034F1A2B0B5F0080A52C /* arrow-left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FFC903451A2B0B5F0080A52C /* arrow-left@2x.png */; };
 		FFC903501A2B0B5F0080A52C /* cw@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FFC903461A2B0B5F0080A52C /* cw@2x.png */; };
 		FFC903511A2B0B5F0080A52C /* earth@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FFC903471A2B0B5F0080A52C /* earth@2x.png */; };
@@ -80,8 +80,8 @@
 		FF0928061A262050008B1E47 /* MeteorologyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeteorologyTests.m; sourceTree = "<group>"; };
 		FF0928141A262F9E008B1E47 /* FirstEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstEngine.h; sourceTree = "<group>"; };
 		FF0928151A262F9E008B1E47 /* FirstEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstEngine.m; sourceTree = "<group>"; };
-		FF0928171A2632BF008B1E47 /* TwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoViewController.h; sourceTree = "<group>"; };
-		FF0928181A2632BF008B1E47 /* TwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoViewController.m; sourceTree = "<group>"; };
+		FF76E9991A5BCB7F00A1075F /* QMService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMService.h; sourceTree = "<group>"; };
+		FF76E99A1A5BCB7F00A1075F /* QMService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMService.m; sourceTree = "<group>"; };
 		FFC903451A2B0B5F0080A52C /* arrow-left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-left@2x.png"; sourceTree = "<group>"; };
 		FFC903461A2B0B5F0080A52C /* cw@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cw@2x.png"; sourceTree = "<group>"; };
 		FFC903471A2B0B5F0080A52C /* earth@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "earth@2x.png"; sourceTree = "<group>"; };
@@ -191,8 +191,6 @@
 				FF0927EA1A262050008B1E47 /* AppDelegate.h */,
 				FF0927EB1A262050008B1E47 /* AppDelegate.m */,
 				FF0927ED1A262050008B1E47 /* Main.storyboard */,
-				FF0928171A2632BF008B1E47 /* TwoViewController.h */,
-				FF0928181A2632BF008B1E47 /* TwoViewController.m */,
 				FFDF4D0C1A2E7E94004256EE /* ViewController */,
 				FFDF4D0B1A2E7E94004256EE /* View */,
 				FF07094A1A2CBDC000F5270F /* Models */,
@@ -237,6 +235,8 @@
 		FF0928101A262F61008B1E47 /* Request */ = {
 			isa = PBXGroup;
 			children = (
+				FF76E9991A5BCB7F00A1075F /* QMService.h */,
+				FF76E99A1A5BCB7F00A1075F /* QMService.m */,
 				FF0709441A2CB85E00F5270F /* NetEngine.h */,
 				FF0709451A2CB85E00F5270F /* NetEngine.m */,
 				FF0928141A262F9E008B1E47 /* FirstEngine.h */,
@@ -430,13 +430,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF76E99B1A5BCB7F00A1075F /* QMService.m in Sources */,
 				FF0927EC1A262050008B1E47 /* AppDelegate.m in Sources */,
 				FFDF4D121A2E7EA7004256EE /* WeatherView.m in Sources */,
 				FF07094D1A2CBDC000F5270F /* WeatherModel.m in Sources */,
 				FFDF4D0F1A2E7E94004256EE /* ViewController.m in Sources */,
 				FF0928161A262F9E008B1E47 /* FirstEngine.m in Sources */,
 				FF0709461A2CB85E00F5270F /* NetEngine.m in Sources */,
-				FF0928191A2632BF008B1E47 /* TwoViewController.m in Sources */,
 				FF0709401A2CB26200F5270F /* UIView+Layer.m in Sources */,
 				FF0927E81A262050008B1E47 /* main.m in Sources */,
 			);

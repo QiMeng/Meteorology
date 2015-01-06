@@ -15,6 +15,8 @@
 #import "WeatherModel.h"
 
 
+#import "QMService.h"
+
 @interface ViewController ()
 
 @property (nonatomic, strong) NSMutableArray * showWeathers;
@@ -73,36 +75,34 @@
     
     [MBProgressHUD showHUDAddedTo:bottomView animated:YES];
     
-    [[NetEngine weatherEngine] weatherUrlStr:@"Typhoon/proxy2.jsp?u=weather_level&p=1"
-                               onWeatherData:^(NSArray * weathers) {
-                                   NSLog(@"%@",weathers);
-                                   
-                                   if ([weathers isKindOfClass:[NSString class]]) {
-                                       //to do ... 数据错误
-                                   }
-                                   else if ([weathers isKindOfClass:[NSArray class]]) {
-                                       
-                                       [_showWeathers removeAllObjects];
+//    [QMService networkLoginDic:@{@"body": @{@"phone": @"15259131237",@"passwd":@"123456"}}
+//             completionHandler:^(id sender) {
+//                 
+//                 
+//                 NSLog(@"账号:%@ 密码:%@",QMUserModelShare.user_im_account,@"123456");
+//                 
+//                 
+//             } failHandler:^(id error) {
+//                 
+//                 [SVProgressHUD showErrorWithStatus:error];
+//                 
+//             }];
 
-                                       [_showWeathers addObjectsFromArray:weathers];
-//                                       for (int i = 0;i< weathers.count;i++) {
-//                                           WeatherModel * model = weathers[i];
-//                                           if (i%3 == 0) {
-//                                               [_showWeathers addObject:model];
-//                                           }
-//                                       }
-                                       
-//                                       bottomView.model = [_showWeathers firstObject];
-                                       
-                                       [self reloadWeather];
-                                       
-                                   }
-                                   
-                                   [MBProgressHUD hideHUDForView:bottomView animated:YES];
-                                   
-                               } onError:^(NSError *error) {
-                                   [MBProgressHUD hideHUDForView:bottomView animated:YES];
-                               }];
+    [QMService QM_MK_WeatherUrlPath:@"Typhoon/proxy2.jsp?u=weather_level&p=1"
+                  completionHandler:^(NSArray * weathers) {
+                      
+                      [_showWeathers removeAllObjects];
+                      
+                      [_showWeathers addObjectsFromArray:weathers];
+                      
+                      [self reloadWeather];
+                      
+                       [MBProgressHUD hideHUDForView:bottomView animated:YES];
+                  } failHandler:^(NSString * errorStr) {
+                      
+                      NSLog(@"%@",errorStr);
+                      [MBProgressHUD hideHUDForView:bottomView animated:YES];
+                  }];
     
     
 }

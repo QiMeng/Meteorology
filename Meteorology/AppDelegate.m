@@ -13,17 +13,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
-    
-    
-    // Override point for customization after application launch.
-    NSMutableDictionary *headerFields = [NSMutableDictionary dictionary];
-    [headerFields setValue:@"iOS" forKey:@"x-client-identifier"];
-    self.yahooEngine = [[FirstEngine alloc] initWithHostName:@"10.10.92.87"
-                                          customHeaderFields:headerFields];
-    // not that these header fields are mandated by yahoo. This line is to show the feature of MKNetworkKit
-    [self.yahooEngine useCache];
-    
-    
     return YES;
 }
 							

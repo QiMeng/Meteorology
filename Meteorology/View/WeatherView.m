@@ -81,13 +81,19 @@
             line0.backgroundColor = [UIColor whiteColor];
             [weatherImageView addSubview:line0];
             
+            
+            UIButton * infoBtn = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+            
+            infoBtn.frame = CGRectMake(weatherImageView.maxX, iconBackgroundImageView.maxY, iconBackgroundImageView.width, weatherImageView.height-iconBackgroundImageView.maxY);
+            
+            [infoBtn addTarget:self action:@selector(touchInfoBtn:) forControlEvents:UIControlEventTouchUpInside];
+            
+            [self addSubview:infoBtn];
+            
+            
         }
 
     }
-    
-    
-    
-    
 }
 
 
@@ -177,6 +183,15 @@
 //	t.duration = 0.25;
 //	t.removedOnCompletion = YES;
 //    [self.layer addAnimation:t forKey:@"flip"];
+    
+}
+
+
+- (void)touchInfoBtn:(id)sender {
+    
+    if (_delegate && [_delegate respondsToSelector:@selector(weatherViewCallInfo:)]) {
+        [_delegate weatherViewCallInfo:_model];
+    }
     
 }
 

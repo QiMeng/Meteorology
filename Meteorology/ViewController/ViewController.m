@@ -10,11 +10,13 @@
 
 #import "UIView+Layer.h"
 
+#import "WeatherViewController.h"
+
 #import <MBProgressHUD.h>
 
 #import "QMService.h"
 
-@interface ViewController ()
+@interface ViewController () <WeatherViewDelegate>
 
 @property (nonatomic, strong) NSMutableArray * showWeathers;
 
@@ -22,12 +24,21 @@
 
 @implementation ViewController
 
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+//    self.navigationController.navigationBarHidden = YES;
+    
+}
+ 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    mapSuperView.hidden = YES;
+//    mapSuperView.hidden = YES;
     
     [mapSuperView setRadius:10 BorderWidth:0 BorderColor:nil];
     
@@ -36,6 +47,9 @@
     [haiquView setRadius:10 BorderWidth:0 BorderColor:nil];
     
     [zaihaiView setRadius:10 BorderWidth:0 BorderColor:nil];
+    
+    bottomView.delegate = self;
+    
     
     _showWeathers = [NSMutableArray array];
     
@@ -97,8 +111,8 @@
 #pragma mark - 更新天气预报板块
 - (void)reloadWeather {
     
-    showWeatherInt++;
-    if (showWeatherInt == _showWeathers.count-1) {
+    showWeatherInt +=3;
+    if (showWeatherInt >= _showWeathers.count-1) {
         showWeatherInt = 0;
     }
     
@@ -107,7 +121,25 @@
     [self performSelector:@selector(reloadWeather) withObject:nil afterDelay:5];
     
 }
+- (void)weatherViewCallInfo:(WeatherModel *)aModel {
+    
+    
+#warning 进入天气预报的详情
+    
+    DLog(@"%@",aModel.city);
+    
+    [self goWeatherViewController];
+    
+    
+}
 
+- (void)goWeatherViewController{
+    
+    WeatherViewController * ctrl = [[WeatherViewController alloc]initWithNibName:@"WeatherViewController" bundle:nil];
+    ctrl.weatherArray = _showWeathers;
+    [self.navigationController pushViewController:ctrl animated:YES];
+    
+}
 
 
 

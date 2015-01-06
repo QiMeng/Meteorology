@@ -24,6 +24,10 @@
 		FF0928051A262050008B1E47 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FF0928031A262050008B1E47 /* InfoPlist.strings */; };
 		FF0928071A262050008B1E47 /* MeteorologyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FF0928061A262050008B1E47 /* MeteorologyTests.m */; };
 		FF0928161A262F9E008B1E47 /* FirstEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = FF0928151A262F9E008B1E47 /* FirstEngine.m */; };
+		FF55EB1F1A5C91B500A896B5 /* WeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF55EB1D1A5C91B500A896B5 /* WeatherViewController.m */; };
+		FF55EB201A5C91B500A896B5 /* WeatherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF55EB1E1A5C91B500A896B5 /* WeatherViewController.xib */; };
+		FF55EB241A5C994F00A896B5 /* WeatherCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF55EB221A5C994F00A896B5 /* WeatherCell.m */; };
+		FF55EB251A5C994F00A896B5 /* WeatherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF55EB231A5C994F00A896B5 /* WeatherCell.xib */; };
 		FF76E99B1A5BCB7F00A1075F /* QMService.m in Sources */ = {isa = PBXBuildFile; fileRef = FF76E99A1A5BCB7F00A1075F /* QMService.m */; };
 		FFC9034F1A2B0B5F0080A52C /* arrow-left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FFC903451A2B0B5F0080A52C /* arrow-left@2x.png */; };
 		FFC903501A2B0B5F0080A52C /* cw@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FFC903461A2B0B5F0080A52C /* cw@2x.png */; };
@@ -78,6 +82,12 @@
 		FF0928061A262050008B1E47 /* MeteorologyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeteorologyTests.m; sourceTree = "<group>"; };
 		FF0928141A262F9E008B1E47 /* FirstEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstEngine.h; sourceTree = "<group>"; };
 		FF0928151A262F9E008B1E47 /* FirstEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstEngine.m; sourceTree = "<group>"; };
+		FF55EB1C1A5C91B500A896B5 /* WeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherViewController.h; sourceTree = "<group>"; };
+		FF55EB1D1A5C91B500A896B5 /* WeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherViewController.m; sourceTree = "<group>"; };
+		FF55EB1E1A5C91B500A896B5 /* WeatherViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeatherViewController.xib; sourceTree = "<group>"; };
+		FF55EB211A5C994F00A896B5 /* WeatherCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherCell.h; sourceTree = "<group>"; };
+		FF55EB221A5C994F00A896B5 /* WeatherCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherCell.m; sourceTree = "<group>"; };
+		FF55EB231A5C994F00A896B5 /* WeatherCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeatherCell.xib; sourceTree = "<group>"; };
 		FF76E9991A5BCB7F00A1075F /* QMService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMService.h; sourceTree = "<group>"; };
 		FF76E99A1A5BCB7F00A1075F /* QMService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMService.m; sourceTree = "<group>"; };
 		FFC903451A2B0B5F0080A52C /* arrow-left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-left@2x.png"; sourceTree = "<group>"; };
@@ -236,6 +246,16 @@
 			path = Request;
 			sourceTree = "<group>";
 		};
+		FF55EB1B1A5C91A500A896B5 /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				FF55EB1C1A5C91B500A896B5 /* WeatherViewController.h */,
+				FF55EB1D1A5C91B500A896B5 /* WeatherViewController.m */,
+				FF55EB1E1A5C91B500A896B5 /* WeatherViewController.xib */,
+			);
+			path = Weather;
+			sourceTree = "<group>";
+		};
 		FFC903211A2B08730080A52C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -266,6 +286,9 @@
 			children = (
 				FFDF4D101A2E7EA7004256EE /* WeatherView.h */,
 				FFDF4D111A2E7EA7004256EE /* WeatherView.m */,
+				FF55EB211A5C994F00A896B5 /* WeatherCell.h */,
+				FF55EB221A5C994F00A896B5 /* WeatherCell.m */,
+				FF55EB231A5C994F00A896B5 /* WeatherCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -275,6 +298,7 @@
 			children = (
 				FFDF4D0D1A2E7E94004256EE /* ViewController.h */,
 				FFDF4D0E1A2E7E94004256EE /* ViewController.m */,
+				FF55EB1B1A5C91A500A896B5 /* Weather */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -379,6 +403,8 @@
 				FFC903571A2B0B5F0080A52C /* untitled@2x.png in Resources */,
 				FFC903561A2B0B5F0080A52C /* statistics@2x.png in Resources */,
 				FFC903511A2B0B5F0080A52C /* earth@2x.png in Resources */,
+				FF55EB201A5C91B500A896B5 /* WeatherViewController.xib in Resources */,
+				FF55EB251A5C994F00A896B5 /* WeatherCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,7 +459,9 @@
 				FF76E99B1A5BCB7F00A1075F /* QMService.m in Sources */,
 				FF0927EC1A262050008B1E47 /* AppDelegate.m in Sources */,
 				FFDF4D121A2E7EA7004256EE /* WeatherView.m in Sources */,
+				FF55EB1F1A5C91B500A896B5 /* WeatherViewController.m in Sources */,
 				FF07094D1A2CBDC000F5270F /* WeatherModel.m in Sources */,
+				FF55EB241A5C994F00A896B5 /* WeatherCell.m in Sources */,
 				FFDF4D0F1A2E7E94004256EE /* ViewController.m in Sources */,
 				FF0928161A262F9E008B1E47 /* FirstEngine.m in Sources */,
 				FF0709461A2CB85E00F5270F /* NetEngine.m in Sources */,
@@ -564,10 +592,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: yongsheng liu (24D459F86D)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Meteorology/Meteorology-Prefix.pch";
 				INFOPLIST_FILE = "Meteorology/Meteorology-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "e371df5b-d289-43a5-b344-26dcb433bb5b";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -578,10 +608,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: yongsheng liu (24D459F86D)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Meteorology/Meteorology-Prefix.pch";
 				INFOPLIST_FILE = "Meteorology/Meteorology-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "e371df5b-d289-43a5-b344-26dcb433bb5b";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

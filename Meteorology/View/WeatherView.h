@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "WeatherModel.h"
+
+
+@protocol WeatherViewDelegate <NSObject>
+
+//详细信息
+- (void)weatherViewCallInfo:(WeatherModel*)aModel;
+
+@end
+
 @interface WeatherView : UIView {
     
     UIImageView * weatherImageView; //天气信息背景图片
@@ -20,12 +29,9 @@
     
     UIImageView * iconImageView;            //天气状况图片
     
-    
-//    UIButton * infoBtn; //详情
-//    UIView * lineView0;
-//    UIView * lineView1;
-    
 }
+
+@property (nonatomic, assign) id<WeatherViewDelegate>delegate;
 
 @property (nonatomic, strong) WeatherModel * model;
 

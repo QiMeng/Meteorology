@@ -17,6 +17,8 @@
     dispatch_once(&predicate, ^{
         if (!sharedInstance) {
             sharedInstance = [[QMService alloc] initWithDefaultSettings];
+            
+            [sharedInstance useCache];
         }
     });
     return sharedInstance;

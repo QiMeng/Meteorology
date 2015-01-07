@@ -7,6 +7,7 @@
 //
 
 #import "WeatherCell.h"
+#import "QMService.h"
 #import <UIImageView+ProgressView.h>
 
 @implementation WeatherCell
@@ -19,7 +20,11 @@
     
     _model = model;
     
-    [bgImageView sd_setImageWithURL:[NSURL URLWithString:@"http://qimeng.github.io/phone/imgs/000.gif"] usingProgressView:nil];
+    NSString * imageStr = [NSString stringWithFormat:kImageHost,model.imgStr0];
+    
+    DLog(@"%@",imageStr);
+    
+    [bgImageView sd_setImageWithURL:[NSURL URLWithString:imageStr] usingProgressView:nil];
     
 }
 

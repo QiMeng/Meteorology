@@ -10,7 +10,13 @@
 #import "WeatherModel.h"
 //#import <SVProgressHUD.h>
 
+#define kImageHost @"http://qimeng.github.io/phone/imgs/%@"
+
+
 #define QMServiceShare [QMService sharedManager]
+
+
+
 
 typedef void (^CompletionBlock)(id sender);
 typedef void (^FailBlock)(id error);

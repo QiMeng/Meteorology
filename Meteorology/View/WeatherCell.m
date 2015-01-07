@@ -19,16 +19,14 @@
     
     _model = model;
     
-     [bgImageView sd_setImageWithURL:[NSURL URLWithString:@"http://qimeng.github.io/phone/imgs/000.gif"]];
-    
-    
+    [bgImageView sd_setImageWithURL:[NSURL URLWithString:@"http://qimeng.github.io/phone/imgs/000.gif"] usingProgressView:nil];
     
 }
 
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
+    
     // Configure the view for the selected state
 }
 

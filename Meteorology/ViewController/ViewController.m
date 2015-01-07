@@ -22,16 +22,7 @@
 
 @end
 
-@implementation ViewController
-
-
-- (void)viewWillAppear:(BOOL)animated {
-    
-    [super viewWillAppear:animated];
-//    self.navigationController.navigationBarHidden = YES;
-    
-}
- 
+@implementation ViewController 
 
 - (void)viewDidLoad
 {

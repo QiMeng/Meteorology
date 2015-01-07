@@ -20,7 +20,7 @@
     // Do any additional setup after loading the view from its nib.
     
 //    self.navigationController.navigationBarHidden = NO;
-//    self.navigationController.hidesBarsOnSwipe = YES;//ios8才有
+    self.navigationController.hidesBarsOnSwipe = YES;//ios8才有
     
 }
 
@@ -30,28 +30,21 @@
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    
     return 300;
-    
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
     
     WeatherCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WeatherCell"];
     
     if (!cell) {
         
         [tableView registerNib:[UINib nibWithNibName:@"WeatherCell" bundle:nil] forCellReuseIdentifier:@"WeatherCell"];
-        
         cell = [tableView dequeueReusableCellWithIdentifier:@"WeatherCell"];
-        
     }
     
     WeatherModel * model = _weatherArray[indexPath.row*3];
-
     cell.model = model;
-
     return cell;
 }
 

@@ -17,5 +17,5 @@
 @property (nonatomic, copy) NSString * desc0;    //"晴"
 @property (nonatomic, copy) NSString * desc1;    //"晴"
 
-
++ (id)itemFromArray:(NSArray *)array;
 @end

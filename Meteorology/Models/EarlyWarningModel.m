@@ -10,4 +10,15 @@
 
 @implementation EarlyWarningModel
 
+
++ (id)itemFromArray:(NSArray *)array{
+    
+    EarlyWarningModel * model = [[EarlyWarningModel alloc]init];
+    
+    
+    
+    
+    return model;
+}
+
 @end

@@ -37,6 +37,19 @@ typedef void (^FailBlock)(id error);
                  failHandler:(FailBlock)failBlock ;
 
 
+/**
+ *  预警列表
+ *
+ *  @param aPathStr        接口参数
+ *  @param completionBlock <#completionBlock description#>
+ *  @param failBlock       失败 < NSString: 错误信息 >
+ */
++ (void)QM_MK_EarlyWarningUrlPath:(NSString *)aPathStr
+           completionHandler:(CompletionBlock)completionBlock
+                 failHandler:(FailBlock)failBlock ;
+
+
+
 #pragma mark - 错误编码
 /**
  *  根据错误编码,返回错误信息
